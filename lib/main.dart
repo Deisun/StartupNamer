@@ -21,6 +21,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
+}
+
 class RandomWordsState extends State<RandomWords> {
   final List<WordPair> _suggestions = <WordPair>[];
   final Set<WordPair> _saved = Set<WordPair>();
@@ -51,7 +56,6 @@ class RandomWordsState extends State<RandomWords> {
       }
 
       return _buildRow(_suggestions[index]);
-
     });
   }
 
@@ -111,7 +115,3 @@ class RandomWordsState extends State<RandomWords> {
   }
 }
 
-class RandomWords extends StatefulWidget {
-  @override
-  RandomWordsState createState() => RandomWordsState();
-}
